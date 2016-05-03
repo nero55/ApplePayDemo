@@ -26,6 +26,7 @@
 		7014143F1C777D9B001F8D87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		701414421C777D9B001F8D87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		701414441C777D9B001F8D87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7014144A1C777DF1001F8D87 /* ApplePayDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ApplePayDemo.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +59,7 @@
 		701414321C777D9B001F8D87 /* ApplePayDemo */ = {
 			isa = PBXGroup;
 			children = (
+				7014144A1C777DF1001F8D87 /* ApplePayDemo.entitlements */,
 				701414361C777D9B001F8D87 /* AppDelegate.h */,
 				701414371C777D9B001F8D87 /* AppDelegate.m */,
 				701414391C777D9B001F8D87 /* ViewController.h */,
@@ -110,6 +112,12 @@
 				TargetAttributes = {
 					7014142F1C777D9B001F8D87 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 43785E7HJ6;
+						SystemCapabilities = {
+							com.apple.OMC = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -261,10 +269,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ApplePayDemo/ApplePayDemo.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ApplePayDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alvechen.ApplePayDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -272,10 +285,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ApplePayDemo/ApplePayDemo.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ApplePayDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alvechen.ApplePayDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
